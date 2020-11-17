@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Loops: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+  /*In this next task, we want you to write a simple program that, given a name, 
+  searches an array of objects containing names and phone numbers (phonebook) 
+  and, if it finds the name, outputs the name and phone number into the 
+  paragraph (para) and then exits the loop before it has run its course. 
+
+  You are given three variables to begin with:
+
+  i — starts off with a value of 0; intended to be used as an iterator.
+  name — contains a name to search for
+  para — contains a reference to a paragraph, which will be used to report the results.
+  You should use a type of loop that you've not used in the previous task.
+  */
+
+    let name = 'Mustafa';
+    let i = 0;
+    let para = document.createElement('p');
+
+    let phonebook = [
+      { name : 'Chris', number : '1549' },
+      { name : 'Li Kang', number : '9634' },
+      { name : 'Anne', number : '9065' },
+      { name : 'Francesca', number : '3001' },
+      { name : 'Mustafa', number : '6888' },
+      { name : 'Tina', number : '4312' },
+      { name : 'Bert', number : '7780' },
+      { name : 'Jada', number : '2282' },
+    ]
+
+    // Add your code here
+    while(i < phonebook.length) {
+      switch (name) {
+        case 'Chris':
+          para.textContent = phonebook[0]["name"] + ' ' + phonebook[0]["number"];
+          break;
+        case 'Li Kang':
+          para.textContent = phonebook[1]["name"] + ' ' + phonebook[1]["number"];
+          break;
+        case 'Anne':
+          para.textContent = phonebook[2]["name"] + ' ' + phonebook[2]["number"];
+          break;
+        case 'Francesca':
+          para.textContent = phonebook[3]["name"] + ' ' + phonebook[3]["number"];
+          break;
+        case 'Mustafa':
+          para.textContent = phonebook[4]["name"] + ' ' + phonebook[4]["number"];
+          break;
+        case 'Tina':
+          para.textContent = phonebook[5]["name"] + ' ' + phonebook[5]["number"];
+          break;
+        case 'Bert':
+          para.textContent = phonebook[6]["name"] + ' ' + phonebook[6]["number"];
+          break;
+        case 'Jada':
+          para.textContent = phonebook[7]["name"] + ' ' + phonebook[7]["number"];
+          break;
+        }
+      i++;
+    }
+        
+    // Don't edit the code below here!
+    let section = document.querySelector('section');
+    section.appendChild(para);
+  </script>
+
+</html>
