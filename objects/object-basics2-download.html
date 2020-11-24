@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let bandInfo;
+
+    // Add your code here
+    let band = {
+      name: 'Yeeters',
+      nationality: 'Canada',
+      genre: 'EDM',
+      formed: 2015,
+      split: 2020,
+      albums: [['yeet', 2015], ['yeeting', 2018]]
+    };
+
+    bandInfo = `${band.name} is from ${band.nationality} that plays ${band.genre}.
+                They formed in ${band.formed} then split in ${band.split}.
+                Their first album is called ${band.albums[0][0]} released in ${band.albums[0][1]}.`;
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+  </script>
+
+</html>
